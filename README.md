@@ -3,7 +3,7 @@ Mental stress is a common problem in people especially in the students . It can 
 
 Therefore, it is important to detect mental stress at an early stage and take necessary measures to be able don't affected by mental stress in the college student.We had collected data from Our College students.
 
-We should classify into 3 levels in the mental stress by using PSS Stress Scale Factor we followed this approach to classiy categories.
+We should classify into 3 levels in the mental stress by using PSS Stress Scale Factor we followed this approach to classify categories.
 
 For the data we took from the students by asking some Psycological questions and taking responses from them and then classifing into 3-classes as above we said PSS Stress Scale. (We prepared a google form by this questions the responses are recorded similar to survey data). Around 194 data response we had collected in our college students.
 
