@@ -45,8 +45,6 @@ What are the usual Psychological or Emotional effects of stress you've noticed w
 
 What are your personal methods to relieve stress ?
 
-What are the usual Cognitive effects of stress you've noticed by
-
-yourself?
+What are the usual Cognitive effects of stress you've noticed by yourself?
 
 Are you satisfied with the quality of your work ?
