@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental-Stress-Prediction</title>
+</head>
+
+<body>
+
+<h2>Predictive analysis</h2>
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="body_form">
+                <div class="left_side">
+
+                    <h3>Age(Age should be in 18-24)</h3>
+                    <input id="first" name="Age" type="number ">
+                    <h3>Gender</h3><select name="gender" id="dropdown" required="required">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <p/>
+                    <h3>Have you ever had difficulty in concentrating or appeared to have a blank mind?</h3><select name="Blank_mind" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p/>
+                    <h3>Do you feel anxiety with your works?</h3><select name="Anxiety_works" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p/>
+                    <h3>Do you feel anxiety with your social life?</h3><select name="Anxiety_social" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p/>
+                    <h3>Do you feel anxiety with your personal problems?</h3><select name="Anxiety_personal" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p/>
+                    <h3>When do you feel more stress?</h3><select name="times_of_day" id="dropdown" required="required">
+                        <option value="Morning">MORNING</option>
+                        <option value="Afternoon">AFTERNOON</option>
+                        <option value="Evening">EVENING</option>
+                        <option value="Night">NIGHT</option>
+                    </select>
+                    <p/>
+                
+
+                </div>
+                <div class="right_side">
+
+                    <h3>Do you find difficulty to pay attention in class?</h3><select name="Attention_class" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p/>
+                    <h3>What are the usual Psychological effects when you in stress?</h3><select name="psyco" id="dropdown" required="required">
+                        <option value="Tiredness">TIREDNESS</option>
+                        <option value="Fear">FEAR</option>
+                        <option value="Sadness">SADNESS</option>
+                        <option value="Anger">ANGER</option>
+                        <option value="Loneliness">LONELINESS</option>
+                    </select>
+                    <p/>
+                    <h3>What are your personal methods to relieve stress ?</h3><select name="relive" id="dropdown" required="required">
+                        <option value="Sleeping">SLEEPING</option>
+                        <option value="Eating">EATING</option>
+                        <option value="Games">GAMES</option>
+                        <option value="Social_media">SOCIAL MEDIA</option>
+                    </select>
+                    <p/>
+                    <h3>How much time do you spend for studying in a day?</h3><select name="time" id="dropdown" required="required">
+                        <option value="hr1">0-1 HOURS</option>
+                        <option value="hr2">1-2 HOURS</option>
+                        <option value="hr3">2-3 HOURS</option>
+                        <option value="hr4">3-4 HOURS</option>
+                        <option value="hr5">4+ HOURS</option>
+                    </select>
+                    <p/>
+                    <h3>Are you satisfied with the quality of your work?</h3><select name="work_satisfaction" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p/>
+                    <h3>Do you struggle to learn new things?</h3><select name="newthings" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p/>
+                    <h3>Do you struggle to achieve your passion or goal?</h3><select name="goals" id="dropdown" required="required">
+                        <option value="Strongly_agree">STRONGLY AGREE</option>
+                        <option value="Agree">AGREE</option>
+                        <option value="Neutral">NEUTRAL</option>
+                        <option value="Disagree">DISAGREE</option>
+                        <option value="Strongly_disagree">STRONGLY DIASGREE</option>
+                    </select>
+                    <p></p><button id="sub" type="submit ">Find the Stress Condition</button>
+                    <br>
+                </div>
+
+
+
+
+
+            </div>
+
+        </form>
+
+
+
+        <br><br><h3>{{pred}}<h3>
+
+
+
+
+    <style>
+        body {
+            text-align: left;
+            padding: 16px 32px;
+            background-color: #ffffff
+        }
+
+        .body_form {
+            display: flex;
+        }
+
+        .left_side {
+            color: black;
+            width: 50%;
+        }
+
+        .right_side {
+            color: black;
+            width: 50%;
+        }
+
+        h3 {
+            font-weight: normal;
+
+        }
+
+
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 12px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 240px;
+            height: 43px;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #dropdown {
+            width: 240px;
+            height: 43px;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            height: 60px;
+            width: 240px;
+            margin: 64px 0px;
+            padding: 10px 16px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: royalblue;
+            color: white;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: SlateBlue;
+            cursor:pointer;
+
+        }
+        
+        #first {
+            border-radius: 4px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 4px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 4px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 4px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
